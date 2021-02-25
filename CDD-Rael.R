@@ -7,6 +7,8 @@ library(lubridate)
 
 dry_day_def <- 1 #dry day definition: less than 1mm of rainfall
 
+
+
 #your data should be in 3 columns : year, month-date, rainfall amount. My 3 columns are called 'Year, Day, Rain'
 
 dat_weather_Rain1 <- read.csv("C:/Users/user/Downloads/Old AIMS laptop/Documents/Documents/Nigeria/dat_weather_Rain1.csv")
@@ -19,6 +21,8 @@ as.mmdd <- function(x, ...) UseMethod("as.mmdd")
 as.mmdd.Date <- function(x, ...) structure(x, class = c("mmdd", "Date"))
 
 as.Date.mmdd <- function(x, ...) structure(x, class = "Date")
+
+#format date function
 
 format.mmdd <- function(x, format = "%m-%d", ...) format(as.Date(x), format = format, ...)
 
